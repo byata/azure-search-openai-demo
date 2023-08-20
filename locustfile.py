@@ -1,6 +1,7 @@
 import random
 import time
 
+
 from locust import HttpUser, between, task
 
 
@@ -14,7 +15,7 @@ class ChatUser(HttpUser):
         self.client.post(
             "/chat",
             json={
-                "history": [{"user": random.choice(["What is Q-drop?", "What happens in a performance review?"])}],
+                "history": [{"user": random.choice(["What is Q-drop?", "Are you stuck at populating Review"])}],
                 "approach": "rrr",
                 "overrides": {"retrieval_mode": "hybrid", "semantic_ranker": True, "semantic_captions": False, "top": 3, "suggest_followup_questions": False},
             },

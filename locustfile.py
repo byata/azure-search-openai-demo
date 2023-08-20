@@ -14,7 +14,7 @@ class ChatUser(HttpUser):
         self.client.post(
             "/chat",
             json={
-                "history": [{"user": random.choice(["What is included in my Northwind Health Plus plan that is not in standard?", "What does a Product Manager do?", "What happens in a performance review?", "Whats your whistleblower policy?"])}],
+                "history": [{"user": random.choice(["What is Q-drop?", "What happens in a performance review?"])}],
                 "approach": "rrr",
                 "overrides": {"retrieval_mode": "hybrid", "semantic_ranker": True, "semantic_captions": False, "top": 3, "suggest_followup_questions": False},
             },
@@ -25,10 +25,10 @@ class ChatUser(HttpUser):
             json={
                 "history": [
                     {
-                        "user": "What happens in a performance review?",
-                        "bot": "During the performance review at Contoso Electronics, the supervisor will discuss the employee's performance over the past year and provide feedback on areas for improvement. They will also provide an opportunity for the employee to discuss their goals and objectives for the upcoming year. The review is a two-way dialogue between managers and employees, and employees will receive a written summary of their performance review which will include a rating of their performance, feedback, and goals and objectives for the upcoming year [employee_handbook-3.pdf].",
+                        "user": "What is Q-drop??",
+                        "bot": "The solution is developed which implements automation by having a Database integrated solution, a Tool/ Widget to perform QA validations both for Ipro Ecapture and Relativity Checks [Q.pdf].",
                     },
-                    {"user": "Does my plan cover eye exams?"},
+                    {"user": "Does it have limitations?"},
                 ],
                 "approach": "rrr",
                 "overrides": {"retrieval_mode": "hybrid", "semantic_ranker": True, "semantic_captions": False, "top": 3, "suggest_followup_questions": False},
